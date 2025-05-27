@@ -1,0 +1,31 @@
+.custom-footer {
+    background: #f4f6f8;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  
+    .social-link {
+      color: #495057;
+      transition: color 0.3s, transform 0.3s;
+  
+      &:hover {
+        color: #007ad9;
+        transform: scale(1.2);
+      }
+  
+      &.instagram:hover {
+        color: #e1306c;
+      }
+  
+      &.facebook:hover {
+        color: #3b5998;
+      }
+  
+      &.linkedin:hover {
+        color: #0077b5;
+      }
+    }
+  }
+  
+  
+  
+  

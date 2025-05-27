@@ -1,0 +1,26 @@
+.inspiration-section {
+    h2 {
+      font-family: 'Inter', sans-serif;
+    }
+  
+    img {
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  
+    p {
+      font-size: 0.95rem;
+    }
+
+    :host ::ng-deep .p-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    :host ::ng-deep .p-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+    }
+    
+  }
+  

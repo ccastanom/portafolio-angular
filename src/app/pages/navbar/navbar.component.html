@@ -1,0 +1,21 @@
+<p-menubar class="bg-white px-4 py-2" [ngStyle]="{ border: 'none', boxShadow: 'none' }">
+  <ng-template pTemplate="start">
+    <div class="flex align-items-center h-full">
+      <span class="font-bold text-3xl" style="color: #6366F1">¡De la banca al código!</span>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="end">
+    <div class="flex gap-2">
+      <button
+        *ngFor="let item of items"
+        pButton
+        type="button"
+        [label]="item.label ?? ''"
+        [icon]="item.icon ?? ''"
+        class="p-button-text custom-menu-button"
+        (click)="item.command?.({ originalEvent: $event, item: item })"
+      ></button>
+    </div>
+  </ng-template>
+</p-menubar>

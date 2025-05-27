@@ -1,0 +1,64 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .hero-content {
+      max-width: 700px;
+      margin: auto;
+  
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #1f2937;
+      }
+  
+      h2 {
+        font-size: 2rem;
+        color: #6366f1;
+        margin-bottom: 1.5rem;
+        transition: opacity 0.5s ease-in-out;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        color: #374151;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+    }
+  
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #1ebc59;
+      }
+    }
+  }
+  
+  
+  
+
+  

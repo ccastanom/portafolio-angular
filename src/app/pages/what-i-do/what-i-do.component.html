@@ -1,0 +1,45 @@
+<div class="surface-card p-5 border-round shadow-2 mt-5">
+  <h2 class="text-3xl text-center mb-3" style="color: #6366F1;">Lo que hago</h2>
+
+  <p class="text-center text-700 mb-5">
+    “A veces me pierdo en el código... y otras veces me encuentro.<br />
+    Cada línea es una lección, cada error un paso más hacia lo que quiero lograr.”
+  </p>
+
+  <p class="text-center text-700 mb-4">
+    Estas son algunas de las tecnologías que he explorado y continúo fortaleciendo en mi camino:
+  </p>
+
+  <!-- Grid de habilidades -->
+  <div class="grid">
+    <div class="col-6 sm:col-4 md:col-3 p-3" *ngFor="let skill of habilidades">
+      <div
+        class="border-round surface-border shadow-1 p-4 flex flex-column align-items-center text-center cursor-pointer"
+        [ngClass]="{ 'resaltado': skill === habilidadSeleccionada }"
+        (click)="seleccionarHabilidad(skill)"
+      >
+        <div class="icon-wrapper mb-3">
+          <img [src]="skill.icono" [alt]="skill.nombre" class="icono-habilidad" />
+        </div>
+        <div class="text-800 font-semibold mb-2">{{ skill.nombre }}</div>
+        <p-progressBar
+          [value]="skill.porcentaje"
+          [showValue]="false"
+          styleClass="w-full mb-2"
+          [style]="{ height: '8px' }"
+        ></p-progressBar>
+        <div class="text-600 text-sm">{{ skill.nivel }}</div>
+
+        <!-- Texto de progreso al hacer clic -->
+        <div *ngIf="skill === habilidadSeleccionada" class="text-primary mt-2 text-sm font-medium">
+          Progreso actual: {{ skill.porcentaje }}%
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

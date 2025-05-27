@@ -1,0 +1,9 @@
+<div class="projects-container">
+    <p-card *ngFor="let project of projects" header="{{ project.title }}" class="project-card">
+      <p>{{ project.description }}</p>
+      <a [href]="project.link" target="_blank">
+        <button pButton type="button" label="Ver en GitHub" icon="pi pi-github" class="p-button-sm"></button>
+      </a>
+    </p-card>
+  </div>
+  
