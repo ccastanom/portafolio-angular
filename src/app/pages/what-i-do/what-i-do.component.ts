@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProgressBarModule } from 'primeng/progressbar';
 
+
+/* Componente standalone que muestra habilidades y su nivel de dominio, utiliza barra de progreso de PrimeNG para representar visualmente el avance
+*/
+
 @Component({
   selector: 'app-what-i-do',
   standalone: true,
@@ -10,11 +14,15 @@ import { ProgressBarModule } from 'primeng/progressbar';
   styleUrls: ['./what-i-do.component.scss']
 })
 export class WhatIDoComponent {
+/* Variable para controlar la habilidad seleccionada, la utilizo para resaltar la tarjeta seleccionada y mostrar su porcentaje */
+
   habilidadSeleccionada: any = null;
 
   seleccionarHabilidad(skill: any) {
     this.habilidadSeleccionada = skill;
   }
+
+/* Arreglo de habilidades tecnológicas, cada objeto contiene nombre, icono, nivel textual y porcentaje de dominio*/
 
   habilidades = [
     { nombre: 'C++', icono: 'assets/icons/c++.png', nivel: 'Intermedio', porcentaje: 60 },

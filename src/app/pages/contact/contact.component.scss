@@ -1,9 +1,13 @@
+/*  Fondo claro y neutro para contraste
+  - Bordes redondeados y sombra suave para dar efecto de tarjeta
+*/
 .custom-footer {
     background: #f4f6f8;
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
   
-    .social-link {
+     /* Estilos para los enlaces de redes sociales, color base gris oscuro, efecto hover con cambio de color y ligera expansión */
+    .social-link { 
       color: #495057;
       transition: color 0.3s, transform 0.3s;
   
@@ -11,7 +15,7 @@
         color: #007ad9;
         transform: scale(1.2);
       }
-  
+
       &.instagram:hover {
         color: #e1306c;
       }

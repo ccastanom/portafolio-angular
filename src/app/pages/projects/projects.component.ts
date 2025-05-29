@@ -1,3 +1,8 @@
+/*
+   ESTA SECCION LA ELIMINE DEL CODIGO NO ERA NECESARIA
+  */
+
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';

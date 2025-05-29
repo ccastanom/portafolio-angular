@@ -13,6 +13,10 @@ import { TooltipModule } from 'primeng/tooltip';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit {
+ /* Lógica de rotación de palabras inspiradoras
+    - Arreglo con palabras clave que representan la identidad profesional
+    - Se actualiza cada 2 segundos para mostrar una palabra diferente*/
+
   words = ['Desarrolladora', 'Exploradora', 'Aprendiz'];
   currentWordIndex = 0;
   currentWord = this.words[0];

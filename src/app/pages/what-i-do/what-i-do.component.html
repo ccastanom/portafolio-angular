@@ -1,33 +1,39 @@
+<!-- Contenedor principal de la sección "Lo que hago"
+  - Usa clases de PrimeNG para estilo de tarjeta: sombra, bordes redondeados y padding
+  - Contiene título, frases motivadoras y un grid de habilidades tecnológicas -->
 <div class="surface-card p-5 border-round shadow-2 mt-5">
-  <h2 class="text-3xl text-center mb-3" style="color: #6366F1;">Lo que hago</h2>
+  <h2 class="text-3xl text-center mb-3" style="color: #6366F1;">Lo que hago</h2> <!-- Título principal de la sección -->
 
-  <p class="text-center text-700 mb-5">
+  <p class="text-center text-700 mb-5"> <!-- Frase reflexiva sobre el proceso de aprendizaje en programación -->
     “A veces me pierdo en el código... y otras veces me encuentro.<br />
     Cada línea es una lección, cada error un paso más hacia lo que quiero lograr.”
   </p>
 
-  <p class="text-center text-700 mb-4">
+  <p class="text-center text-700 mb-4"> <!-- Introducción al grid de tecnologías y habilidades -->
     Estas son algunas de las tecnologías que he explorado y continúo fortaleciendo en mi camino:
   </p>
 
-  <!-- Grid de habilidades -->
+  <!-- Grid de habilidades: Cada tarjeta muestra un ícono, nombre, barra de progreso y nivel, al hacer clic se resalta la habilidad y muestra su porcentaje de avance-->
   <div class="grid">
     <div class="col-6 sm:col-4 md:col-3 p-3" *ngFor="let skill of habilidades">
+      <!-- Tarjeta de habilidad con estilos interactivos -->
       <div
         class="border-round surface-border shadow-1 p-4 flex flex-column align-items-center text-center cursor-pointer"
         [ngClass]="{ 'resaltado': skill === habilidadSeleccionada }"
         (click)="seleccionarHabilidad(skill)"
-      >
+      > <!-- Ícono de la tecnología -->
         <div class="icon-wrapper mb-3">
           <img [src]="skill.icono" [alt]="skill.nombre" class="icono-habilidad" />
         </div>
         <div class="text-800 font-semibold mb-2">{{ skill.nombre }}</div>
+        <!-- Barra de progreso PrimeNG (oculta el valor numérico) -->
         <p-progressBar
           [value]="skill.porcentaje"
           [showValue]="false"
           styleClass="w-full mb-2"
           [style]="{ height: '8px' }"
         ></p-progressBar>
+        <!-- Nivel textual asociado a la habilidad -->
         <div class="text-600 text-sm">{{ skill.nivel }}</div>
 
         <!-- Texto de progreso al hacer clic -->

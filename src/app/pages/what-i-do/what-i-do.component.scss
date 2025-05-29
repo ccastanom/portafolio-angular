@@ -1,8 +1,10 @@
+/*  Crea una burbuja circular para cada ícono de habilidad, centra el contenido y aplica color de fondo suave
+  - Incluye animaciones de escala y sombra al pasar el mouse*/
 .icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;      // ⬅️ más pequeño que antes (era 80px)
+  width: 64px;      //  más pequeño
   height: 64px;
   margin: 0 auto;
   background-color: #f0f4ff;
@@ -14,18 +16,22 @@
     box-shadow: 0 6px 18px rgba(99, 102, 241, 0.2);
   }
 }
+/*  Ícono de habilidad (imagen dentro de la burbuja). Tamaño ajustado para armonizar con el contenedor
+  - Aplica transición  */
 
 .icono-habilidad {
   width: 36px;      // ajustado (era 40px o más)
   height: 36px;
   transition: transform 0.3s ease;
 }
+/* Estado resaltado al seleccionar una habilidad, aplica borde y sombra en tono violeta
+  - Añade un fondo más claro para resaltar visualmente la tarjeta */
 
 .resaltado {
   border: 2px solid #6366F1;
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.25);
   transition: all 0.3s ease;
-  background-color: #eef2ff; // 💜 color más notorio al resaltar
+  background-color: #eef2ff; // color más notorio al resaltar
 }
 
   

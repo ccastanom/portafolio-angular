@@ -1,26 +1,36 @@
 .inspiration-section {
     .inspiration-grid {
+  
+      /* Estilo para imágenes, aplica una transición suave al hacer hover, aumenta ligeramente el tamaño para un efecto visual atractivo*/
+
       img {
         transition: transform 0.3s ease;
         &:hover {
           transform: scale(1.05);
         }
       }
-  
+      
+      /* Estilo para los contenedores con borde*/
       .surface-border {
         transition: box-shadow 0.3s;
         &:hover {
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
       }
+
+      /* Botones personalizados del menú de navegación
+      -Uso color morado llamativo con un hover más claro, estilo reforzado con !important para sobrescribir estilos de PrimeNG*/
       .custom-menu-button {
-        color: #7e22ce !important; // morado (puedes cambiar el tono si prefieres otro)
+        color: #7e22ce !important; // morado principal
         font-weight: 600;
       
         &:hover {
           color: #9333ea !important; // un morado un poco más claro al pasar el mouse
         }
       }  
+
+      /* Ajustes al componente p-menubar de PrimeNG,  se eliminan bordes y sombras por defecto
+      - Se alinean los elementos del menú verticalmente */
       ::ng-deep .p-menubar {
         border: none;
         box-shadow: none;
@@ -30,6 +40,7 @@
         align-items: center;
       }
       
+      /* Fuente tipográfica personalizada para todo el bloque*/
       font-family: 'Raleway', sans-serif;
 
       

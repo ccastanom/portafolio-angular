@@ -1,10 +1,15 @@
+<!-- Menú de navegación principal (navbar)
+  - Usa el componente <p-menubar> de PrimeNG con estilos personalizados
+  - Elimina el borde y sombra por defecto para un diseño limpio -->
+
 <p-menubar class="bg-white px-4 py-2" [ngStyle]="{ border: 'none', boxShadow: 'none' }">
+  <!-- Contenido del lado izquierdo del menú (start)-->
   <ng-template pTemplate="start">
     <div class="flex align-items-center h-full">
       <span class="font-bold text-3xl" style="color: #6366F1">¡De la banca al código!</span>
     </div>
   </ng-template>
-
+<!-- Contenido del lado derecho del menú (end), uso de clases para espaciado y estilo uniforme -->
   <ng-template pTemplate="end">
     <div class="flex gap-2">
       <button

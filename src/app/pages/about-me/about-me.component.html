@@ -1,13 +1,17 @@
+<!--Contenedor principal de la sección 'Sobre mí'-->
 <div class="surface-card shadow-2 border-round p-5 mt-5 mx-auto" style="max-width: 1000px;">
-  <div class="grid md:align-items-center">
-    <!-- Imagen -->
+  <div class="grid md:align-items-center"> <!--  Divide el contenido en dos columnas: imagen y texto-->
+    <!-- Imagen:  Columna izquierda que muestra la imagen personal-->     <!-- 
+        - Uso de clases de PrimeFlex para centrado
+      - Imagen dentro de un contenedor con estilos definidos en CSS-->
+
     <div class="col-12 md:col-5 flex justify-content-center mb-4 md:mb-0">
       <div class="foto-container">
         <img src="assets/yo_play.jpg" alt="Sobre mí" class="foto-expandible" />
       </div>
     </div>
 
-    <!-- Texto -->
+    <!-- Texto: Columna derecha con la información biográfica, uso de estilos de PrimeNG para tipografía y espaciado-->
     <div class="col-12 md:col-7">
       <h2 class="text-3xl mb-3 text-primary text-center md:text-left">Sobre mí</h2>
       <p class="text-base text-700 line-height-3 mb-3 text-center md:text-left">
@@ -22,6 +26,8 @@
       <p class="text-base text-700 line-height-3 mb-4 text-center md:text-left">
         El desarrollo se ha convertido en una nueva pasión que me reta e inspira a través del código.
       </p>
+      <!-- 
+        BLOQUE DE BOTÓN: Botón de PrimeNG -->
       <div class="text-center md:text-left">
         <button pButton type="button" icon="pi pi-download" label="Descargar CV" class="p-button-primary"></button>
       </div>

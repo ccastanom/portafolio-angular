@@ -1,14 +1,16 @@
+<!-- Sección principal de presentación (hero): Muestra el nombre y un mensaje dinámico-->
 <section class="hero">
     <div class="hero-content">
       <h1>¡Hola! Soy Claudia Castaño</h1>
-      <h2>{{ currentWord }}</h2>
+      <h2>{{ currentWord }}</h2> <!-- Texto que rota palabras inspiradoras desde el TS -->
       <p>
         Impulsada por el aprendizaje continuo y el desarrollo de soluciones tecnológicas que generan impacto real. 
         En la programación descubrí el equilibrio entre lógica, innovación y mi propósito.
       </p>
     </div>
   
-    <!-- Botón flotante -->
+    <!-- Botón flotante de WhatsApp: Usa un ícono de PrimeIcons.
+    - Incluye un tooltip (PrimeNG) para mejorar la experiencia del usuario  -->
     <button 
         class="whatsapp-float" 
         (click)="onChat()" 

@@ -1,3 +1,4 @@
+/* Contenedor centrado para la imagen:  Usa Flexbox para alinear la imagen horizontal y verticalmente*/
 .foto-container {
   display: flex;
   justify-content: center;
@@ -12,12 +13,18 @@
 }
 
 
+/* Imagen expandible, adaptable al tamaño del contenedor
+  - Aplica transición para efecto de escala
+*/
 .foto-expandible {
   width: 100%;
   height: auto;
   transition: transform 0.4s ease;
   border-radius: 1rem;
 }
+
+
+/* Efectos al pasar el cursor: La imagen se agranda ligeramente*/
 
 .foto-container:hover .foto-expandible {
   transform: scale(1.07);

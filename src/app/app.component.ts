@@ -9,6 +9,11 @@ import { InspirationComponent } from './pages/inspiration/inspiration.component'
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
+/* Componente principal de la aplicación (AppComponent)
+  - Define el punto de entrada de la app Angular
+  - Declara los componentes standalone que componen la interfaz del portafolio
+  - Usa un archivo de plantilla HTML (app.component.html) y estilos globales*/
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -25,5 +30,6 @@ import { ContactComponent } from './pages/contact/contact.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+   // Título de la aplicación (no es usado directamente en la plantilla actual)
   title = 'portafolio-ng';
 }

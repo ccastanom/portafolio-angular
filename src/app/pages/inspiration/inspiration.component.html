@@ -1,21 +1,28 @@
+<!--Contenedor principal de la sección 'Lo que me inspira'
+  - Usa estilos de PrimeNG (surface-card, shadow, border-round)
+  - Incluye título, frase inspiradora y un mosaico visual con imágenes -->
 <div class="inspiration-section surface-card p-4 border-round shadow-2 mt-5">
-  <h2 class="text-3xl mb-3 text-center" style="color: #6366F1;">Lo que me inspira</h2>
+  <h2 class="text-3xl mb-3 text-center" style="color: #6366F1;">Lo que me inspira</h2> <!-- Título de la sección con color destacado y centrado -->
   <p class="text-center mb-4">
     "Me inspiran los pequeños momentos: la libertad de montar bicicleta, el aroma de un café y el reto de aprender algo nuevo cada día."
   </p>
 
-  <!-- Mosaico con tarjetas PrimeNG -->
+  <!-- Mosaico con tarjetas PrimeNG  (p-card)
+    - Se genera dinámicamente con *ngFor usando el arreglo 'imagenes'
+    - Cada tarjeta muestra una imagen y un texto
+    - Uso de diseño responsivo con clases de PrimeFlex-->
+
   <div class="grid justify-content-center mt-4">
     <div class="col-12 sm:col-6 md:col-4 lg:col-3 p-3" *ngFor="let imagen of imagenes">
       <p-card class="h-full shadow-3 border-round overflow-hidden text-center">
-        <ng-template pTemplate="header">
+        <ng-template pTemplate="header"> <!-- Imagen como cabecera de la tarjeta -->
           <img
             [src]="imagen.url"
             [alt]="imagen.texto"
             class="w-full h-15rem object-fit-cover border-bottom-1 border-300"
           />
         </ng-template>
-        <div class="text-700 font-medium p-3">{{ imagen.texto }}</div>
+        <div class="text-700 font-medium p-3">{{ imagen.texto }}</div> <!-- Texto asociado a la imagen -->
       </p-card>
     </div>
   </div>

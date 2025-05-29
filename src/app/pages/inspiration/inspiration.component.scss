@@ -1,18 +1,22 @@
+  /*Estilos generales de la sección 'Lo que me inspira' aplico estilos al título, imágenes, y párrafos */
 .inspiration-section {
     h2 {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', sans-serif; // Fuente personalizada para el título
     }
   
     img {
-      max-height: 250px;
-      object-fit: cover;
-      border-radius: 12px;
+      max-height: 250px; // Limita la altura de las imágenes
+      object-fit: cover; // Recorta para llenar el espacio sin deformar
+      border-radius: 12px; // Bordes redondeados suaves
     }
   
     p {
-      font-size: 0.95rem;
+      font-size: 0.95rem; // Tamaño de fuente ligeramente reducido para elegancia
     }
 
+      /* Estilo de tarjetas PrimeNG (p-card)
+    - Usa ::ng-deep para aplicar estilos a componentes de librerías externas
+    - Aplica animación al hacer hover: zoom ligero y sombra azulada */
     :host ::ng-deep .p-card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }

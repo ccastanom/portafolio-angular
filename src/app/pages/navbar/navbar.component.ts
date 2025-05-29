@@ -4,6 +4,8 @@ import { MenuItem } from 'primeng/api';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 
+/* Standalone component que utiliza Menubar de PrimeNG para construir la barra de navegación, incluye ButtonModule para posibles extensiones visuales*/
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -12,6 +14,7 @@ import { ButtonModule } from 'primeng/button';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  /* Definición del menú de navegación, se inicializa como un arreglo vacío, cada elemento del menú tiene etiqueta, ícono y comando asociado*/
   items: MenuItem[] = [];
 
   ngOnInit() {
@@ -24,6 +27,7 @@ export class NavbarComponent {
     ];
   }
 
+  /* Funcionalidad de desplazamiento, busca el elemento en el DOM por ID si lo encuentra, realiza scroll hacia él*/
   scrollTo(id: string): void {
     const el = document.getElementById(id);
     if (el) {
